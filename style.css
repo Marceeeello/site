@@ -1,44 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --laranja-claro: #FF862A;
- }
+    --azul-marinho: #002B5B;
+    --dourado-pirata: #FFD700;
+    --vermelho-luffy: #C1121F;
+    --bege-pergaminho: #FFF8DC;
+    --cinza-claro: #F1F1F1;
+}
 
 body {
     font-size: 1rem;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cinza-claro);
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #ffffff;
+    background-color: var(--azul-marinho);
+    color: white;
+    padding: 2rem 0;
 }
-
-
-section {
-    padding-bottom: 5rem;
-}
-
 
 .nav-link {
-    color: #CB6D43;
+    color: var(--dourado-pirata);
     font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--vermelho-luffy);
+}
+
+.nav-img {
+    width: 120px;
 }
 
 .inicio-fundo {
-    /* aula 3 */
-    background-image: url('img/4965007.jpg');
-    /* Substitua pelo caminho da sua imagem */
+    background-image: url('img/grand-line.jpg'); /* imagem temática */
     background-size: cover;
-    background-position: right;
-    border-radius: 80px;
+    background-position: center;
+    border-radius: 40px;
     width: 100%;
     height: 606px;
     padding: 40px;
     margin: 0 auto;
+    position: relative;
+    color: white;
 }
 
-/* posicionamento para a imagem à direita */
 .img-inicio {
     position: absolute;
     right: 0;
@@ -47,116 +59,147 @@ section {
     height: auto;
 }
 
-
 .esquerda-conteudo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+    z-index: 2;
 }
 
+.display-4 {
+    font-family: 'Pirata One', cursive;
+    font-size: 3rem;
+    text-shadow: 2px 2px var(--vermelho-luffy);
+}
 
 .botao-inicio {
-    background-color: var(--laranja-claro);
+    background-color: var(--vermelho-luffy);
+    color: white;
     border-radius: 30px;
     border: none;
     width: 14em;
     height: 3em;
-    align-content: center;
-
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.display-4 {
-    text-shadow: -5px 5px var(--laranja-claro);
+.botao-inicio:hover {
+    background-color: var(--azul-marinho);
 }
 
-
-#tropicalia {
+#sobre {
     position: relative;
-    padding-top: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
+    padding: 5rem 0;
+    margin: 3rem 0;
+    background: url('img/mapa-pirata.png') top right no-repeat,
+                url('img/rumo-grand-line.png') bottom left no-repeat;
     background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
 }
 
-#tropicalia .container {
+#sobre .container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
 }
 
-
 h2 {
-    font-family: 'Lemon', serif;
+    font-family: 'Pirata One', cursive;
     font-size: 2.5em;
-    font-style: normal;
-    color: var(--laranja-claro);
+    color: var(--dourado-pirata);
+    margin-bottom: 1rem;
 }
 
 #galeria {
     background-color: #FAF4F4;
-
+    padding: 4rem 0;
 }
 
 .fundo-galeria {
-    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
+    background: url('img/jolly-roger.png') bottom right no-repeat;
     background-size: 180px 180px;
 }
 
+.img-fluid {
+    border: 4px solid var(--azul-marinho);
+    box-shadow: 0 0 10px rgba(0, 43, 91, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+}
+
 #contato {
-    background-image: url('img/4965007.jpg');
+    background-image: url('img/pergaminho-fundo.jpg');
     background-size: cover;
     padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
 }
 
 .formulario {
-    background-color: #ffffff;
+    background-color: var(--bege-pergaminho);
     padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
-    /* Borda arredondada para o formulário */
+    border: 2px dashed var(--azul-marinho);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
     font-weight: bold;
 }
 
 .formulario button {
-    background-color: #CB6D43;
+    background-color: var(--vermelho-luffy);
+    color: white;
     border: none;
     font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: var(--azul-marinho);
 }
 
 .form-control {
     background-color: #F1EDEF;
+    border-radius: 8px;
 }
-.menu-acessibilidade{
+
+footer {
+    background-color: var(--azul-marinho);
+    color: white;
+    padding: 2rem 0;
+}
+
+footer i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: var(--dourado-pirata);
+}
+
+.menu-acessibilidade {
     position: fixed;
-    top:2rem;
-    right:20px;
+    top: 2rem;
+    right: 20px;
     z-index: 1000;
 }
-.rotacao-botao{
+
+.rotacao-botao {
     transform: rotate(-90deg);
     transform-origin: right center;
 }
 
-.opcoes-acessibilidade{
-    margin-top:10px;
+.opcoes-acessibilidade {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.opcoes-acessibilidade button{
+.opcoes-acessibilidade button {
     margin-bottom: 5px;
 }
-.apresenta-lista{
+
+.apresenta-lista {
     display: none;
 }
+
